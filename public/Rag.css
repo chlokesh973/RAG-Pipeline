@@ -1,0 +1,220 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: f;
+}
+
+/* Body Styling with Background Image */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url(back.jpg) no-repeat center center/cover; 
+  /* Replace 'your-background-image.jpg' with your image file path or URL */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Full-Page Container */
+.container {
+  width: 800%;
+  max-width: 1200px;
+  height: 400%;
+  max-height: 95vh;
+  /* background-color: rgba(255, 255, 255, 0.95);  Slight transparency for better readability */
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);*/
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 30px;
+  overflow-y: auto;
+  /* backdrop-filter: blur(5px); Optional: Adds a slight blur effect */
+
+    background-color: transparent; /* Makes the container fully clear */
+    backdrop-filter: blur(8px); /* Optional: Adds a subtle blur effect to the background */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Optional: Soft border for visibility */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds shadow to make content stand out */
+
+  
+}
+
+/* Header Styles */
+h1 {
+  text-align: center;
+  color: #5e8bb9;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* Section Spacing */
+.upload-section, .query-section {
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #d2bebeb5;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Input Styling */
+input[type="file"] {
+  display: block;
+  margin: 10px auto 20px;
+  font-size: 1rem;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #de5aa3;
+}
+
+/* Button Styling */
+button {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #d6572c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #c4872b;
+  transform: scale(1.05);
+}
+
+/* Status and Progress Styles */
+.status-text {
+  text-align: center;
+  font-size: 1rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+.progress-bar {
+  height: 5px;
+  width: 0;
+  background-color: #7fd7a3;
+  border-radius: 2px;
+  margin: 10px auto 0;
+  transition: width 0.5s ease;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    
+  }
+  #responseText {
+  color: #333333; /* Dark gray color */
+}
+
+
+  textarea {
+    height: 120px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  textarea {
+    height: 100px;
+  }
+}
+.query-section {
+  background-color: transparent; /* Makes the background transparent */
+  backdrop-filter: blur(6px); /* Optional: Adds a blur effect to the background */
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Optional: Adds a soft border */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+  margin-bottom: 20px;
+}
+
+/* Optional: For the textarea in the query section */
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.4); /* Slightly lighter border for transparency effect */
+  background-color: rgba(255, 255, 255, 0.132); /* Slightly transparent background for textarea */
+  color: #e9f0f3;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+#responseText {
+  background-color: rgba(255, 255, 255, 0.119); /* More transparent background */
+  padding: 15px;
+  border-radius: 8px; /* Rounded corners */
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Light border */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: adds shadow for visual separation */
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #333;
+  text-align: left;
+}
+
+.status-text {
+  font-style: italic;
+}
+#pdfUpload {
+  background-color: transparent; /* Makes the background transparent */
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Slightly transparent border */
+  padding: 10px;
+  border-radius: 5px;
+  color: #d1b2b2; /* Keeps the text visible */
+  font-size: 1rem;
+  width: 100%; /* Ensure it takes the full width */
+  margin-bottom: 10px;
+  transition: border-color 0.3s ease;
+}
+
+#pdfUpload:hover {
+  border-color: #4CAF50; /* Change border color on hover */
+}
+#responseText {
+  color: #ebdddd; /* Dark gray color */
+}
